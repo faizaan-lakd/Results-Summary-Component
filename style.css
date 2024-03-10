@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'HankenGrotesk', sans-serif;
+    font-size: 1.125rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.result-summary {
+    max-width: 46rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+    box-shadow: .5rem 1rem 3rem hsla(224, 30%, 27%, 0.2);
+    margin: 0.5rem;
+}
+
+.result {
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.7);
+    border-radius: 2rem;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 3.25rem;
+}
+
+.summary {
+    padding: 2.5rem;
+    color: hsla(224, 30%, 27%);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.result-score {
+    display: grid;
+    place-content: center;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 50%;
+    margin-inline: auto;
+    width: 12.5rem;
+    aspect-ratio: 1/1;
+}
+
+.result-score span {
+    font-size: 5rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    display: block;
+}
+
+.result-rank {
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.grid-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.grid-flow[data-spacing="large"] {
+    gap: 2rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+.summary-item[data-accent="accent-2"] {
+    background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.summary-item[data-accent="accent-3"] {
+    background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.summary-item[data-accent="accent-4"] {
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.summary-item-title {
+    font-size: 1.25rem;
+}
+
+.summary-score {
+    color: hsl(224, 30%, 27%, 0.5);
+    font-weight: 800;
+}
+
+.summary-score span {
+    color: hsl(224, 30%, 27%);
+}
+
+.continue {
+    color: hsl(0, 0%, 100%);
+    background: hsl(224, 30%, 27%);
+    line-height: 1;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+}
+
+.continue:hover {
+    cursor: pointer;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));;
+}
+
+@media (max-width: 670px) {
+    .result-summary {
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        font-size: 1rem;
+    }
+}
